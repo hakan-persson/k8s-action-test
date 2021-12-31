@@ -42,3 +42,7 @@ jobs:
           kubeconfig: ${{ secrets.KUBECONFIG }}
           # context: <context name>  #If left unspecified, current-context from kubeconfig is used as default
         id: setcontext
+
+      - name: Get cluster info
+        run: |
+          kubectl cluster-info
